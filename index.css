@@ -7,7 +7,7 @@
     border-radius: 3px;
 }
 .cropped{
-    height:80px;
+    height:70px;
 }
 .nav-link{
     font-size: 30px;
@@ -90,5 +90,5 @@ a{
 
 #f {
     margin-left:89%;
-    margin-top:-55%
+    margin-top:-55%;
 }
