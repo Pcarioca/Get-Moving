@@ -33,6 +33,7 @@ a{
 #big-logo{
     width:100%;
     margin:20px;
+    margin-left:-54%
 }
 #headtitle{
     text-align: center;
@@ -89,17 +90,7 @@ a{
     margin-left:30%;
 }
 
-table {
-    border-collapse: collapse;
-    width: 98%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #D2FAFF;
-  }
+#f {
+    margin-left:89%;
+    margin-top:-55%;
+}
