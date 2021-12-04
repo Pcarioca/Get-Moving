@@ -70,4 +70,14 @@ a{
 }
 #qr{
     display: block;
+    justify-content: center;
+}
+#id{
+    text-align: center;
+    width: 100%;
+}
+#center{
+    display: block;
+    justify-content: center;
+    text-align: center;
 }
