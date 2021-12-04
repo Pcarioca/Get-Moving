@@ -1,7 +1,9 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
-
+body{
+    background-color: #f0fdff;
+}
 .lightnav{
     background-color: #D2FAFF;
     border-radius: 3px;
