@@ -3,6 +3,7 @@
 }
 body{
     background-color: #f0fdff;
+    overflow:none;
 }
 .lightnav{
     background-color: #D2FAFF;
