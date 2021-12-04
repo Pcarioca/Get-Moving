@@ -3,7 +3,7 @@ var toastLiveExample = document.getElementById('liveToast')
 const qrSection = document.getElementById("qr-section");
 const qrCodeImg = document.getElementById("qr");
 const downloadButton = document.getElementById("download-button");
-const TransportOption = document.getElementsByClassName("transport");
+const TransportOption = Array.from( document.querySelectorAll(".transport"));
 const validationCustom1 = document.getElementById("validationCustom01"); //prenume
 const validationCustom2 = document.getElementById("validationCustom02"); //nume
 const validationCustom3 = document.getElementById("validationCustom03"); //city
@@ -20,10 +20,19 @@ const terms = document.getElementById("invalidCheck"); //terms and conditions
 if (toastTrigger) {
   toastTrigger.addEventListener('click', function () {
     var toast = new bootstrap.Toast(toastLiveExample)
-
+    const radio = TransportOption.filter(element => element.checked);
+    const vehicle = radio[0].value;
+    const firstName = validationCustom1.value;
+    const lastName = validationCustom2.value;
+    const city = validationCustom3.value;
+    const country = validationCustom4.value;
+    const zipCode = validationCustom5.value;
+    const fullEmail = email.value + at.value;
+    const address = adress.value;
+    const phoneNumber = prefix.value + phone.value;
     toast.show()
     setTimeout( () => {
-      axios.get("http://localhost:4000/get-code")
+      axios.get("http://localhost:4000/get-code", {params: {vehicle: vehicle, firstName:firstName, lastName:lastName, city:city, country:country, zipCode:zipCode, email:fullEmail, address:address, phoneNumber:phoneNumber}})
       .then(data => {
         qrCodeImg.src = data.data.url;
         qrSection.style.display = "block";
