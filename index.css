@@ -16,7 +16,10 @@ body{
 }
 .nav-link{
     font-size: 30px;
-    margin-inline: 50px;
+    margin-inline: 20px;
+}
+.navbar-toggler-icon{
+    color:black;
 }
 #qr-section{
     display: none;
