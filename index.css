@@ -47,8 +47,11 @@ a{
     display: block;
     width: 100%;
     display: inline-block;
-  vertical-align: middle;
+    vertical-align: middle;
     /* transform: translateX(400px); */
+}
+#info{
+    display:none;
 }
 #buttons{
     text-align: center;
@@ -99,23 +102,3 @@ a{
     margin-left:89%;
     margin-top:-55%;
 }
-table {
-    border-collapse: collapse;
-    width: 98%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #D2FAFF;
-  }
-
-  
-
-  #fname, #lname, #for, #valid{
-      font-size: 40px;
-  }

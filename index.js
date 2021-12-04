@@ -19,7 +19,11 @@ const fname = document.getElementById("fname") //first name verify
 const lname = document.getElementById("lname") //last name verify
 const ticket = document.getElementById("for") //what is it for? verify
 const valid = document.getElementById("valid") //valid or not? verify
-
+const submitQr = document.getElementById("submitqr");
+const infoSection = document.getElementById("info");
+const fnameverify = document.getElementById("firstname");
+const lnameverify = document.getElementById("lastname");
+const vehicle = document.getElementById("vehicle");
 
 if (toastTrigger) {
   toastTrigger.addEventListener('click', function () {
@@ -49,5 +53,34 @@ if (toastTrigger) {
       })
     }, 1000)
     
+  })
+}
+if(submitQr){
+  submitQr.addEventListener("click", () => {
+    function getBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+      });
+    }
+    const file = document.getElementById("formFileLg").files[0];
+    getBase64(file).then(
+      data => {
+        console.log(encodeURI(data))
+        axios.post("http://localhost:4000/verify-code", {base64: encodeURI(data)})
+          .then(info => {
+            console.log(info.data)
+            infoSection.style.display = "block";
+            lnameverify.innerHTML = info.data.lastName;
+            vehicle.innerHTML = info.data.vehicle;
+            fnameverify.innerHTML = info.data.firstName;
+          })
+          .catch(err => {
+            alert("Code is used or doesn't exist")
+          })
+      }
+    );
   })
 }

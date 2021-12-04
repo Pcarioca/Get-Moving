@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="crop.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" ></script>
+
     <title>Get Moving</title>
 </head>
 
@@ -49,18 +51,18 @@
 
         <div class="row">
             <div class="col-lg-6">
-                <form action="/action_page.php">
+                
                     <label for="formFileLg" class="form-label">
                         <h4>Upload the qr code in order to scan it</h4>
                     </label>
-                    <input class="form-control form-control-lg btn-outline-primary" id="formFileLg" type="file"> <br>
+                    <input class="form-control form-control-lg btn-outline-primary" id="formFileLg" type="file" accept=".png"> <br>
                     <input type="submit" class="btn btn-success" id="submitqr">
-                </form>
+               
             </div> <br> <br>
-            <div class="col-lg-5 offset-lg-1">
-               <h4><b>First Name:</b></h4> <div id="fname">Andrei</div> <br>
-               <h4><b>Last Name:</b></h4> <div id="lname">Munteanu</div> <br>
-               <h4><b>for:</b></h4> <div id="for">Bus</div> <br>
+            <div class="col-lg-5 offset-lg-1" id="info">
+               <h4><b>First Name:</b></h4> <div id="firstname">Andrei</div> <br>
+               <h4><b>Last Name:</b></h4> <div id="lastname">Munteanu</div> <br>
+               <h4><b>for:</b></h4> <div id="vehicle">Bus</div> <br>
                <h4><b>Valid</b></h4> <div id="valid">Yes</div>
             </div>
         </div>
@@ -72,6 +74,7 @@
 
     <script src="./bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/js/bootstrap.js">
     </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
