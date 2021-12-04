@@ -4,7 +4,11 @@
 }
 body{
     background-color: #f0fdff;
+<<<<<<< HEAD
     overflow-x: hidden;
+=======
+    overflow:none;
+>>>>>>> e6094849cddc09d38b93f8e9407d51fa2f7952ae
 }
 .lightnav{
     background-color: #D2FAFF;
