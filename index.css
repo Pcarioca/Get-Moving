@@ -71,6 +71,8 @@ a{
 #qr{
     display: block;
     justify-content: center;
+    margin-left:38%;
+    margin-top:6%;
 }
 #id{
     text-align: center;
@@ -80,4 +82,7 @@ a{
     display: block;
     justify-content: center;
     text-align: center;
+}
+#use {
+    margin-left:30%;
 }
