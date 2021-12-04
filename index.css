@@ -113,3 +113,9 @@ table {
   tr:nth-child(even) {
     background-color: #D2FAFF;
   }
+
+  
+
+  #fname, #lname, #for, #valid{
+      font-size: 40px;
+  }

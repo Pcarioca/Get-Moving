@@ -15,6 +15,10 @@ const adress = document.getElementById("address"); //adresa
 const prefix = document.getElementById("floatingSelectGrid")  //prefix
 const phone = document.getElementById("floatingInputGrid"); //phone number
 const terms = document.getElementById("invalidCheck"); //terms and conditions
+const fname = document.getElementById("fname") //first name verify
+const lname = document.getElementById("lname") //last name verify
+const ticket = document.getElementById("for") //what is it for? verify
+const valid = document.getElementById("valid") //valid or not? verify
 
 
 if (toastTrigger) {
