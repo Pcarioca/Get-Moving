@@ -1,8 +1,10 @@
 *{
     font-family: 'Montserrat', sans-serif;
+    
 }
 body{
     background-color: #f0fdff;
+    overflow-x: hidden;
 }
 .lightnav{
     background-color: #D2FAFF;
@@ -14,6 +16,9 @@ body{
 .nav-link{
     font-size: 30px;
     margin-inline: 50px;
+}
+#qr-section{
+    display: none;
 }
 .paddingnav{
     margin-top: 20px;
