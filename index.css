@@ -1,0 +1,13 @@
+.lightnav{
+    background-color: #D2FAFF;
+}
+.paddingnav{
+    margin-top: 20px;
+    margin-inline: 20px;
+}
+.blue{
+    color:#00899B;
+}
+a{
+    color:inherit;
+}
