@@ -31,6 +31,7 @@ a{
 #big-logo{
     width:100%;
     margin:20px;
+    margin-left:-54%
 }
 #headtitle{
     text-align: center;
@@ -85,4 +86,9 @@ a{
 }
 #use {
     margin-left:30%;
+}
+
+#f {
+    margin-left:89%;
+    margin-top:-55%
 }
