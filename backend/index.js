@@ -162,8 +162,8 @@ app.post("/provider", (req, res) => {
 })
 
 app.post("/login", (req,res) => {
-    const {email, password} = req.body;
-    Provider.findOne({email:email}, (err, account) => {
+    const {username, password} = req.body;
+    Provider.findOne({username:username}, (err, account) => {
         if (err) {
             res.send(err);
             return;
