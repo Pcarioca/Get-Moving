@@ -111,28 +111,4 @@ a{
 /* #f {
     margin-left:89%;
     margin-top:-55%;
-<<<<<<< HEAD
 }
-=======
-} */
-table {
-    border-collapse: collapse;
-    width: 98%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #D2FAFF;
-  }
-
-  
-
-  #fname, #lname, #for, #valid{
-      font-size: 40px;
-  }
->>>>>>> 07d986ec2cd18d5bbabb88cedba8cbaf865c6810

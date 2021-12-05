@@ -9,6 +9,7 @@ import Code from "./models/code.js";
 import Jimp from "jimp"
 import QrCode from "qrcode-reader";
 import * as fs from 'fs';
+import Provider from "./models/provider.js";
 
 //Initializing dotenv for database connection
 
@@ -136,6 +137,53 @@ app.post("/verify-code", (req, res) => {
         qr.decode(image.bitmap);
     })
    
+})
+
+app.post("/provider", (req, res) => {
+    const {businessName, hqLocation, service, city, email, username, password, phoneNumber} = req.body;
+    // console.log(businessName, hqLocation, service, city, email, username, password, phoneNumber)
+    const provider  = new Provider();
+    provider.businessName = businessName;
+    provider.hqLocation = hqLocation;
+    provider.service = service;
+    provider.city = city;
+    provider.email = email;
+    provider.username = username;
+    provider.password = password;
+    provider.phoneNumber = phoneNumber;
+    provider.save()
+        .then(data => {
+           res.send(data)
+        })
+        .catch(err => {
+            res.send(err)
+            console.log(err)
+        })
+})
+
+app.post("/login", (req,res) => {
+    const {email, password} = req.body;
+    Provider.findOne({email:email}, (err, account) => {
+        if (err) {
+            res.send(err);
+            return;
+        }
+        if(account){
+            if(password == account.password){
+                res.send(account);
+                return;
+            }
+            res.send({
+                err: "wrong password"
+            })
+            return;
+        }
+        res.send({
+            err: "account doesn't exist"
+        })
+        return;
+
+    })
 })
 //Check for error
 
