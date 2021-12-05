@@ -17,14 +17,14 @@ button.addEventListener("click", () => {
         hqLocation: hqLocation.value,
         service: service.value,
         city: city.value,
-        email: email.value + at.value,
+        email: email.value +"@" + at.value,
         username: username.value,
         password: password.value,
         phoneNumber: prefix.value + phoneNumber.value
     })
     .then(
         data => {
-            console.log(data)
+            alert("account created")
         }
 
     )

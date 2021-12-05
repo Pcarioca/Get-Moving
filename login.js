@@ -1,10 +1,10 @@
-const email = document.getElementById("email");
+const username = document.getElementById("username");
 const password = document.getElementById("password");
 const button = document.getElementById("liveToastBtn");
 
 button.addEventListener("click", () => {
     axios.post("http://localhost:4000/login", {
-        email: email.value,
+        username: username.value,
         password: password.value
     })
     .then(data => {
