@@ -25,6 +25,7 @@ button.addEventListener("click", () => {
     .then(
         data => {
             alert("account created")
+            window.location.href = "login.html"
         }
 
     )
