@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js" ></script>
     <link rel="stylesheet" href="about.css">
     <link rel="icon" type="image/x-icon" href="crop.png">
     <title>Get Moving</title>
@@ -40,39 +41,43 @@
                     <li class="nav-item">
                         <a class="nav-link blue" href="verify.html">Verify</a>
                     </li>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link blue" href="loginprov.html">For Providers</a>
                     </li>
-
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container-fluid cont">
-        <!-- <div class="row align-items-center align-self-center justify-content-center"> -->
         <div class="row">
-            <div class="col-md-6">
-                <img src="default.png" alt="big-logo" id="big-logo">
-            </div>
-            <div class="col-md-6 align" id="f">
-                
-                
-                    <h1 id="headtitle" class="blue">Welcome to Get moving!</h1>
-                    <div id="buttons">
-                        <a href="get-ticket.html">
-                        <button class="button btn butt">Buy a Ticket</button></a>
-                        <a href="about.html">
-                        <button class="button btn butt">Get more info</button></a>
+            <div class="col-lg-6 offset-lg-3">
+                <h4>Login in your Panel!</h4> <br>
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+                        <label for="validationCustom01" class="form-label">E-mail</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="example@domain.com" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
                     </div>
-               
-            </div>
-        </div>
-        <!-- </div> -->
-    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Password</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Password" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div id="liveAlertPlaceholder"></div> <br>
+                        <button class="btn btn-primary" id="liveToastBtn" type="button">Login</button>
+                    </div>
+                    <div class="col-12">
+                        <h4></h4>
+                        <h4></h4>
+                        <h4></h4>
+                        <h4>Don't have an account? Sign up</h4>
+                        <a class="btn btn-primary" href="provider.html">Sign Up</a>
+                </form>
 
-    <script src="./bootstrap-5.1.3-dist/bootstrap-5.1.3-dist/js/bootstrap.js">
-    </script>
-</body>
-
-</html>
